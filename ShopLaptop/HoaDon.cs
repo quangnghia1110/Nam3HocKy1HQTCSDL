@@ -112,15 +112,15 @@ namespace ShopLaptop
 
         private void btn_TimKiem_HoaDon_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select* from func_SearchOrderByPeroid(@FromDate, @ToDate)", myconn.getConnectionAdmin);
+            SqlCommand cmd = new SqlCommand("select* from func_SearchOrderByPeroid(@FromDate, @ToDate)", myconn.getConnection);
             cmd.Parameters.AddWithValue("@FromDate", date_Tu.Value);
             cmd.Parameters.AddWithValue("@ToDate", date_Den.Value);
             DataTable dt = new DataTable();
-            myconn.openConnectionAdmin();
+            myconn.openConnection();
             SqlDataReader dr = cmd.ExecuteReader();
             dt.Load(dr);
             dgv_HoaDon.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            myconn.closeConnection();
         }
 
         private void tab_Options_Click(object sender, EventArgs e)

@@ -31,9 +31,9 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnectionAdmin();
+            myconn.openConnection();
             DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", myconn.getConnectionAdmin);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", myconn.getConnection);
             dataTable.Load(cmd.ExecuteReader());
             dgv_NhanVien.DataSource = dataTable;
             myconn.closeConnection();
@@ -46,12 +46,22 @@ namespace ShopLaptop
             txt_EmailNV.Text = dgv_NhanVien.CurrentRow.Cells[3].Value.ToString();
             txt_PasswordNV.Text = dgv_NhanVien.CurrentRow.Cells[4].Value.ToString();
             txt_TrangThaiTaiKhoanNV.Text = dgv_NhanVien.CurrentRow.Cells[5].Value.ToString();
+            int isAdmin = Convert.ToInt32(dgv_NhanVien.CurrentRow.Cells[6].Value);
+            if(isAdmin == 1)
+            {
+                radiobtn_Admin.Checked = true;
+            }
+            else
+            {
+                radiobtn_Admin.Checked = false;
+            }
         }        
 
         //hiển thị danh sách nhân viên
         private void btn_Show_NhanVien_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);               
                 DataTable dt = new DataTable();
@@ -66,7 +76,8 @@ namespace ShopLaptop
         //tìm kiếm nhân viên dựa vào mã nhân viên
         private void btn_TimKiem_NhanVien_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_TimKiemNhanVien(@MaNV)", conn);
                 cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_NhanVien.Text);
@@ -81,7 +92,7 @@ namespace ShopLaptop
 
         private void btn_Them_NhanVien_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
+            myconn.openConnection();
             try
             {
                 int isAdmin = 0;
@@ -89,8 +100,8 @@ namespace ShopLaptop
                 {
                     isAdmin = 1;
                 }
-                SqlCommand cmd = new SqlCommand($"BEGIN EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'INSERT'" +
-                    $"EXEC proc_ThemTaiKhoan '{txt_MaNV.Text}, '{txt_PasswordNV.Text}',{isAdmin} END", myconn.getConnectionAdmin);
+    
+                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', {isAdmin}, 'INSERT'", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -100,15 +111,21 @@ namespace ShopLaptop
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnectionAdmin();
+            myconn.closeConnection();
         }
 
         private void btn_Sua_NhanVien_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
+            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'UPDATE'", myconn.getConnectionAdmin);
+                int isAdmin = 0;
+                if (radiobtn_Admin.Checked)
+                {
+                    isAdmin = 1;
+                }
+
+                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', {isAdmin}, 'UPDATE'", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -118,15 +135,21 @@ namespace ShopLaptop
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnectionAdmin();
+            myconn.closeConnection();
         }
 
         private void btn_Xoa_NhanVien_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
+            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'DELETE' ", myconn.getConnectionAdmin);
+                int isAdmin = 0;
+                if (radiobtn_Admin.Checked)
+                {
+                    isAdmin = 1;
+                }
+
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', {isAdmin}, 'DELETE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -137,7 +160,7 @@ namespace ShopLaptop
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
             }
-            myconn.closeConnectionAdmin();
+            myconn.closeConnection();
         }
 
         private void tab_Information_Click(object sender, EventArgs e)
@@ -151,6 +174,11 @@ namespace ShopLaptop
         }
 
         private void tab_Options_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_OptionsNV_Click(object sender, EventArgs e)
         {
 
         }

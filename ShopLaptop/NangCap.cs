@@ -188,21 +188,21 @@ namespace ShopLaptop
 
         private void btn_TimKiem_GoiNangCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
-            SqlCommand cmd = new SqlCommand("Select * From func_SearchNangCapByID(@MaGoiNC)", myconn.getConnectionAdmin);
+            myconn.openConnection();
+            SqlCommand cmd = new SqlCommand("Select * From func_SearchNangCapByID(@MaGoiNC)", myconn.getConnection);
             cmd.Parameters.AddWithValue("@MaGoiNC", txt_TimKiem_GoiNangCap.Text);
             DataTable dt = new DataTable();
             SqlDataReader dr = cmd.ExecuteReader();
             dt.Load(dr);
             dgv_GoiNangCap.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            myconn.closeConnection();
         }
 
 
         private void btn_TimKiem_HoatDongNangCap_Click_1(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
-            SqlCommand cmd = new SqlCommand("Select * From func_SearHoatDongNangCap(@MaNV, @MaKH, @MaGoiBH)", myconn.getConnectionAdmin);
+            myconn.openConnection();
+            SqlCommand cmd = new SqlCommand("Select * From func_SearHoatDongNangCap(@MaNV, @MaKH, @MaGoiBH)", myconn.getConnection);
             cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_MaNhanVien.Text);
             cmd.Parameters.AddWithValue("@MaKH", txt_TimKiem_MaKhachHang.Text);
             cmd.Parameters.AddWithValue("@MaGoiBH", txt_TimKiem_MaGoiNC.Text);
@@ -210,7 +210,7 @@ namespace ShopLaptop
             SqlDataReader dr = cmd.ExecuteReader();
             dt.Load(dr);
             dgv_HoatDongNangCap.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            myconn.closeConnection();
         }
     }
 }

@@ -13,19 +13,20 @@ namespace ShopLaptop
 {
     public partial class FormDangNhap : Form
     {
-        MyConnect myconn=new MyConnect();
+        MyConnect myconn = new MyConnect();
         public FormDangNhap()
         {
             InitializeComponent();
         }
-
+        public static string username;
+        public static string password;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
                 myconn.openConnectionAdmin();
-                string user = txtUser.Text;
-                string password = txtPassword.Text;
+                username = txtUser.Text;
+                password = txtPassword.Text;
                 SqlCommand cmd = new SqlCommand("SELECT dbo.fn_checkLogin(@Username,@Passwd)", myconn.getConnectionAdmin);
                 cmd.Parameters.AddWithValue("@Username", txtUser.Text);
                 cmd.Parameters.AddWithValue("@Passwd", txtPassword.Text);

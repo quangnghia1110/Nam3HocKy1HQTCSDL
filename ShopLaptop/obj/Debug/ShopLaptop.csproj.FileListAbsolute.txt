@@ -288,3 +288,30 @@ D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.csproj
 D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.exe
 D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.pdb
 D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.FormDangNhap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.exe.config
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.exe
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.pdb
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\bin\Debug\FontAwesome.Sharp.dll
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.BaoHanh.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ChiTietHoaDon.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ChiTietPhieuNhap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.FormDangNhap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NangCap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TraGop.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TrangChu.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HoaDon.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.KhachHang.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.Laptop.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NhaCungCap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NhanVien.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.PhieuNhapKho.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ShopLaptop.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.Properties.Resources.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.GenerateResource.cache
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe.licenses
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.cache
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb

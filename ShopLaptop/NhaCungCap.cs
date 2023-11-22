@@ -22,7 +22,8 @@ namespace ShopLaptop
         //hiển thị danh sách nhà cung cấp
         private void btn_Show_NhaCungCap_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM NhaCungCap", conn);
                 DataTable dt = new DataTable();
@@ -37,7 +38,8 @@ namespace ShopLaptop
         //tìm kiếm NCC dựa vào Mã NCC
         private void btn_TimKiem_NhaCungCap_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM fn_TimKiemNhaCungCap(@MaNCC)", conn);
                 cmd.Parameters.AddWithValue("@MaNCC", txt_TimKiem_NhaCungCap.Text);

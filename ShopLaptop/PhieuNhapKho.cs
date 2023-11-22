@@ -22,7 +22,8 @@ namespace ShopLaptop
         //hiển thị danh sách phiếu nhập kho
         private void btn_Show_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM PhieuNhapKho", conn);
                 DataTable dt = new DataTable();
@@ -37,7 +38,8 @@ namespace ShopLaptop
         //tìm kiếm phiếu nhập kho dựa vào ngày nhập kho
         private void btn_TimKiem_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM fn_TimKiemPhieuNhapKho(@NgayNhapKho)", conn);
                 cmd.Parameters.AddWithValue("@NgayNhapKho", dt_TimKiem_PNK.Value);

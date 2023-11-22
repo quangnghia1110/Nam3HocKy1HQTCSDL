@@ -45,7 +45,8 @@ namespace ShopLaptop
         //hiển thị danh sách laptop
         private void btn_Show_Laptop_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Laptop", conn);
 
@@ -61,7 +62,8 @@ namespace ShopLaptop
         //tìm kiếm laptop dựa theo các thuộc tính Tên LT, Tên Hãng LT, Khối lượng, Màu sắc, Màn Hình
         private void btn_TimKiem_Laptop_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM fn_TimKiemLapTop(@TenLT,@KhoiLuong, @TenHangLT, @MauSac, @ManHinh)", conn);
                 cmd.Parameters.AddWithValue("@TenLT", txt_TimKiemLT_TenLT.Text);

@@ -40,7 +40,8 @@ namespace ShopLaptop
 
         private void btn_Show_ChiTietPhieuNhapKho_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietPhieuNhap", conn);
                 DataTable dt = new DataTable();

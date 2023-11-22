@@ -13,7 +13,9 @@ namespace ShopLaptop
         SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-TSVFN4HJ;Initial 
             Catalog=QUANLYQUANCOFFEE_Cur;User Id=" + GLOBAL.username + ";Password=" +
             GLOBAL.password + ";");*/
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";");
         public SqlConnection getConnection
         {
             get
@@ -21,6 +23,7 @@ namespace ShopLaptop
                 return con;
             }
         }
+
         SqlConnection conAdmin = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True");
         public SqlConnection getConnectionAdmin
         {

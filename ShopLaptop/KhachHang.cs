@@ -109,7 +109,8 @@ namespace ShopLaptop
         //tìm kiếm thông tin cách hàng dựa vào Họ Tên, Số CCCD, SĐT
         private void btn_TimKiem_KhachHang_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM fn_TimKiemKhachHang(@HoTenKH, @SoCCCD, @SDT)", conn);
                 cmd.Parameters.AddWithValue("@HoTenKH", txt_TimKiemKH_HoTenKH.Text);
