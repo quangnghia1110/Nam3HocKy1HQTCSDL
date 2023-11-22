@@ -31,12 +31,21 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_NhanVien.DataSource = dataTable;
-            myconn.closeConnection();
+            try
+            {
+                myconn.closeConnection();
+                myconn.openConnection();
+                DataTable dataTable = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", myconn.getConnection);
+                dataTable.Load(cmd.ExecuteReader());
+                dgv_NhanVien.DataSource = dataTable;
+                myconn.closeConnection();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            
         }
         private void dgv_NV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -60,34 +69,50 @@ namespace ShopLaptop
         //hiển thị danh sách nhân viên
         private void btn_Show_NhanVien_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
-            FormDangNhap.password + ";"))
+            try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);               
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_NhanVien.DataSource = dt;
-                conn.Close();
+                using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+            FormDangNhap.password + ";"))
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);
+                    DataTable dt = new DataTable();
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    dt.Load(dr);
+                    dgv_NhanVien.DataSource = dt;
+                    conn.Close();
+                }
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
         }
 
         //tìm kiếm nhân viên dựa vào mã nhân viên
         private void btn_TimKiem_NhanVien_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
-            FormDangNhap.password + ";"))
+            try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_TimKiemNhanVien(@MaNV)", conn);
-                cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_NhanVien.Text);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_NhanVien.DataSource = dt;
-                conn.Close();
+                using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + FormDangNhap.username + ";Password=" +
+             FormDangNhap.password + ";"))
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_TimKiemNhanVien(@MaNV)", conn);
+                    cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_NhanVien.Text);
+                    DataTable dt = new DataTable();
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    dt.Load(dr);
+                    dgv_NhanVien.DataSource = dt;
+                    conn.Close();
+                }
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
         }
 
         private void btn_Them_NhanVien_Click(object sender, EventArgs e)
