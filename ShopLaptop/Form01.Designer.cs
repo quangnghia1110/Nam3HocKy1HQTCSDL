@@ -175,7 +175,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Laptop;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 46;
+            this.iconPictureBox1.IconSize = 37;
             resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.TabStop = false;
@@ -496,6 +496,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ShopLaptop";
+            this.Load += new System.EventHandler(this.ShopLaptop_Load);
             this.panelNavBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

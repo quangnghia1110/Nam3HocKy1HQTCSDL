@@ -152,6 +152,11 @@ namespace ShopLaptop
 
         }
 
+        private void ShopLaptop_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void container(object _form)
         {
             if(panelContent.Controls.Count > 0) 

@@ -261,3 +261,30 @@ D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\Shop
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\bin\Debug\ShopLaptop.exe.config
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\bin\Debug\ShopLaptop.exe
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\bin\Debug\ShopLaptop.pdb
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\bin\Debug\FontAwesome.Sharp.dll
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.BaoHanh.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.ChiTietHoaDon.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.ChiTietPhieuNhap.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.NangCap.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.TraGop.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.TrangChu.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.HoaDon.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.KhachHang.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.Laptop.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.NhaCungCap.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.NhanVien.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.PhieuNhapKho.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.ShopLaptop.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.Properties.Resources.resources
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.csproj.GenerateResource.cache
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.exe.licenses
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.cache
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.exe
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.pdb
+D:\2023-2024_HKI\HQTCSDL\ShopLapTop_FInal\ShopLaptop\obj\Debug\ShopLaptop.FormDangNhap.resources
